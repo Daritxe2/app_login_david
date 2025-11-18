@@ -1,0 +1,29 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Docker MySQL",
+      "driver": "MySQL",
+      "server": "localhost",
+      "port": 3306,
+      "username": "testuser",
+      "password": "testpass",
+      "database": "testdb",
+      "askForPassword": false
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "localhost",
+      "database": "testdb",
+      "username": "testuser",
+      "password": "testpass"
+    }
+  ]
+}

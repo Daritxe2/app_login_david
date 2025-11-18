@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: testuser
+      DB_PASSWORD: testpass
+      DB_NAME: testdb
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"   # 👈 expone MySQL al host
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
