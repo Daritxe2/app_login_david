@@ -13,3 +13,5 @@ Permite iniciar sesión con credenciales almacenadas en la base de datos y, si e
 ```bash
 git clone https://github.com/Daritxe2/app_login_david.git
 cd app_login_david
+sudo docker compose up -d --build
+http://localhost:8000/
